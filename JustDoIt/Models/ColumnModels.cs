@@ -14,7 +14,7 @@ namespace JustDoIt.Models
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-            
+
         public int TaskListId { get; set; }
         [ForeignKey("TaskListId")]
         public virtual TaskListModels TaskList { get; set; }

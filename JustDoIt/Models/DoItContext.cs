@@ -12,9 +12,6 @@ namespace JustDoIt.Models
             : base("DoItContext")
         {
             Database.SetInitializer<DoItContext>(new DropCreateDatabaseIfModelChanges<DoItContext>());
-            UserModels User = new UserModels() { Mail = "mail@mail.com" , Name ="Romesta" , Password ="password" };
-            this.Users.Add(User);
-            this.SaveChanges();
         }
 
         public virtual DbSet<UserModels> Users { get; set; }
